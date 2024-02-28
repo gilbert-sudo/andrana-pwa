@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>TranoGasy - Gilbert Madagascar</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500"
+    />
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="css/mediaelementplayer.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+    <link rel="stylesheet" href="css/fl-bigmug-line.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/searchbar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPQYtD-cm2GmdJGXhFcD7_2vXTkyPXqOs&libraries=places"></script>
+    <style>
+      .add-to-home-button {
+        display: none;
+        position: fixed;
+        bottom: 120px;
+        right: 20px;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+    <script defer="defer" src="static/js/main.9afc2cd5.js"></script>
+    <link href="static/css/main.f8dbba5a.css" rel="stylesheet" />
+  </head>
+  <body>
+    <button id="add-to-home-button" class="mt-5 add-to-home-button">
+      Add to Home Screen
+    </button>
+    <div id="root"></div>
+    <script>
+      let deferredPrompt;
+      window.addEventListener("beforeinstallprompt", (e) => {
+        e.preventDefault(), (deferredPrompt = e);
+        document.getElementById("add-to-home-button").style.display = "block";
+      });
+      const addToHomeButton = document.getElementById("add-to-home-button");
+      addToHomeButton.addEventListener("click", () => {
+        deferredPrompt &&
+          (deferredPrompt.prompt(),
+          deferredPrompt.userChoice.then((e) => {
+            "accepted" === e.outcome
+              ? console.log("User accepted the A2HS prompt")
+              : console.log("User dismissed the A2HS prompt"),
+              (deferredPrompt = null),
+              (addToHomeButton.style.display = "none");
+          }));
+      });
+    </script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/like.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scroll.js"></script>
+  </body>
+</html>
